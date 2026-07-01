@@ -1,3 +1,10 @@
+import CustomerList from "../../features/customers/components/CustomerList";
+
 export default function CustomersPage() {
-  return <h1>Customers</h1>;
+  return (
+    <div className="p-4">
+      <h1 className="mb-4 text-2xl font-bold">Mijozlar</h1>
+      <CustomerList />
+    </div>
+  );
 }
