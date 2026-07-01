@@ -7,6 +7,7 @@ import CustomersPage from "../pages/customers/CustomersPage";
 import DebtsPage from "../pages/debts/DebtsPage";
 import ReportsPage from "../pages/reports/ReportsPage";
 import SettingsPage from "../pages/settings/SettingsPage";
+import CustomerDetailPage from "../pages/customers/CustomerDetailPage";
 
 export default function AppRouter() {
   return (
@@ -18,8 +19,12 @@ export default function AppRouter() {
           <Route path="/debts" element={<DebtsPage />} />
           <Route path="/reports" element={<ReportsPage />} />
           <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/customers" element={<CustomersPage />} />
+<Route path="/customers/:id" element={<CustomerDetailPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
   );
 }
+
+
