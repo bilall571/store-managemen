@@ -1,11 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import MainLayout from "../layouts/MainLayout";
+import DashboardPage from "../pages/dashboard/DashboardPage";
+
 export default function AppRouter() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<h1>Dashboard</h1>} />
-            </Routes>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<DashboardPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
